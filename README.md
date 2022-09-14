@@ -2,10 +2,9 @@
 
 ## How To Code
 <ol>
-    <li>Read the spec</li>
-    <li>Make a plan</li>
-    <li></li>
-    <li>Use good style</li>
+    <li>Read the Spec!!!</li>
+    <li>Make a Plan</li>
+    <li>Use Good Style</li>
 
 </ol>
 
