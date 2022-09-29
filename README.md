@@ -17,7 +17,7 @@
 </ol>
 
 ## Tutorial Recordings
-[Week 3](https://youtu.be/4lleKPFgx3k).
+[Week 3 - (ASCII, 1D Loops, 2D Loops, Structs, Enums)](https://youtu.be/4lleKPFgx3k)
 
 ## Starter Template
 
