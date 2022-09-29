@@ -17,10 +17,7 @@
 </ol>
 
 ## Tutorial Recordings
-<ul>
-    <li>[Week 3](https://youtu.be/4lleKPFgx3k)</li>
-
-</ul>
+[Week 3](https://youtu.be/4lleKPFgx3k).
 
 ## Starter Template
 
