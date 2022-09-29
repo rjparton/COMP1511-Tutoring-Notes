@@ -1,6 +1,20 @@
 Robbie
+    Tall - height 
+    Handsome - looks
+    Kind - personality
+    Soft spoken - demeanor
+    Approachable - 
+    Fat - weight
+    Thin
 
+    
+COMP1511
+    Torture
+    Pain
+    siuffering
+    Not fun
+    Tedious
+    fun
 
-
-
-COMP1511/UNSW
+    Enjoyment level
+    Difficulty

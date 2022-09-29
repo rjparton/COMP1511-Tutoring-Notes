@@ -5,6 +5,12 @@
 
 #define MAX_STRING_LEN 100
 
+// struct label {
+//     //THINGS
+//     // TYPE category;
+// }
+
+
 struct person {
     int shoe_size;
     double height;
@@ -15,6 +21,7 @@ struct person {
     // char *colour;
 };
 
+
 int main() {
     struct person samantha;
     samantha.shoe_size = 100;
@@ -22,19 +29,22 @@ int main() {
     samantha.first_name_initial = 's';
 
     printf("shoe size: %d\n", samantha.shoe_size);
-    printf("height: %d\n", samantha.shoe_size);
-    printf("initial: %c\n", samantha.shoe_size);
+    printf("height: %lf\n", samantha.height);
+    printf("initial: %c\n", samantha.first_name_initial);
 
+    struct person keaton;
 
+    keaton.shoe_size = 200;
+    keaton.height = 180;
 
     // ADVANCED STRINGS
-    printf("Now to do some slightly naughty stuff with strings...\n\n");
+    // printf("Now to do some slightly naughty stuff with strings...\n\n");
 
-    strcpy(samantha.favourite,"Robbieeee");
-    samantha.colour = strdup("green");
+    // strcpy(samantha.favourite,"Robbieeee");
+    // samantha.colour = strdup("green");
 
-    printf("favourite: %s\n", samantha.favourite);
-    printf("colour: %s\n", samantha.colour);
+    // printf("favourite: %s\n", samantha.favourite);
+    // printf("colour: %s\n", samantha.colour);
 }
 
 // int main() {

@@ -4,7 +4,7 @@
 
 int main(void) {
     char sixtyfive = 65;
-    printf("Let's print the number 65 as a character is "%c"\n", sixtyfive);
+    printf("Let's print the number 65 as a character is '%c'\n", sixtyfive);
 
     char myChar;
 
@@ -35,6 +35,8 @@ int main(void) {
     }
 
     // LETTER ARITHMETIC - WOWOW!
+    // a b c d e f g ...
+    // 1 2 3 4 5 6 7 ... 
 
     if (myChar >= 'a' && myChar <= 'z') {
         int letterIndex = myChar - 'a' + 1;
