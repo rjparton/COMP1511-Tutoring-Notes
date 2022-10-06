@@ -77,24 +77,22 @@ int main(void) {
         }
         row = row + 1;
     }
-
     printf("We are now executing code after the 2D while loop!\n");
 
     // 2D WHILE LOOPS
-    size = 3;
-    row = 0;
-    printf("Printing a 2D while loop a different way\n");
-    while (row < size) {
+    // size = 3;
+    // row = 0;
+    // printf("Printing a 2D while loop a different way\n");
+    // while (row < size) {
 
-        int col = 0; // col is normally referred to as j
-        while (col < size) {
-            printf("%d, %d\n", row, col);
-            col = col + 1;
-        }
-        row = row + 1;
-    }
-
-    printf("We are now executing code after the 2D while loop!\n");
+    //     int col = 0; // col is normally referred to as j
+    //     while (col < size) {
+    //         printf("%d, %d\n", row, col);
+    //         col = col + 1;
+    //     }
+    //     row = row + 1;
+    // }
+    // printf("We are now executing code after the 2D while loop!\n");
 
     return 0;
 }
