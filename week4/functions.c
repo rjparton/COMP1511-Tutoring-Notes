@@ -19,13 +19,20 @@ struct colour {
 int square_plus_five(int number);
 void scan_array(int array[], int size);
 void print_colours(struct colour colour_struct);
+void square_plus_five_pointer(int *number);
 
 int main() {
 
     int i = 2;
-    // square_plus_five(i);
-    i = square_plus_five(i);
+    square_plus_five(i);
+    printf("i now = %d\n", i); // still = 2
+
+    i = square_plus_five(i); // = 9
     printf("i now = %d\n", i);
+
+    i = 1;
+    square_plus_five_pointer(&i);
+    printf("i now = %d\n", i); // = 6
 
     int our_array[SIZE];
     
@@ -55,6 +62,17 @@ int square_plus_five(int number) {
     number = number * number;
     number += 5;
     return number;
+
+    // Smarty pants way
+    // return (number * number) + 5;
+}
+
+// Takes an input number and returns the squared value + 5
+void square_plus_five_pointer(int *number) {
+    // Totally okay reasonable way too
+    *number = *number * *number;
+    *number += 5;
+    // return number;
 
     // Smarty pants way
     // return (number * number) + 5;
