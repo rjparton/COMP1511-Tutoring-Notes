@@ -15,7 +15,6 @@ int main (void) {
 
     int character = getchar();
     while (character != EOF) {
-        // int encrypted_character = encrypt(character, shift);
         character += 1;
         putchar(character);
         character = getchar();
