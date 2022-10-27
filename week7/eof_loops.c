@@ -4,21 +4,21 @@
 
 int main (void) {
 
-    // Solution
-    // char my_arr[MAX_LETTERS];
-    // while (fgets(my_arr, MAX_LETTERS, stdin) != NULL) {
-    //     printf("Input: %s\n", my_arr);
-    // }
+    // DON'T DO THIS
+    // while (scanf == 1)
 
-    // "hello" "world"
-    // return 0;
-
-    int character = getchar();
-    while (character != EOF) {
-        character += 1;
-        putchar(character);
-        character = getchar();
+    // USE EOF
+    char character;
+    while (scanf("%c", &character) != EOF) {
+        printf("%c", character);
+        // scanf(" %d", &character);
     }
 
+    // char character2;
+    // printf("Enter two characters: ");
+    // while (scanf(" %c %c", &character,&character2) != EOF) {
+    //     printf("The first character is '%c' and the second is '%c'!\n", character, character2);
+    //     printf("Enter a number: ");
+    // }
     
 }
