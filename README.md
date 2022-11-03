@@ -4,7 +4,7 @@
 
 Zoom for Remote: [Thursday 11AM](https://unsw.zoom.us/j/7586396881)
 
-[Week 3 - (ASCII, 1D Loops, 2D Loops, Structs, Enums)](https://youtu.be/4lleKPFgx3k)
+[Week 3 - (ASCII, 1D Loops, 2D Loops, Structs, Enums)](https://youtu.be/4lleKPFgx3k)\
 [Week 8 - (Linked Lists - Traversal, Insertion)](https://youtu.be/Mi7Ao-ocJWY)
 
 ## Tips & Tricks
