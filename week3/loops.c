@@ -1,12 +1,12 @@
 // Robbie PPPPPPP
 
-/* 
+/*
     STATEMENTS:
         the sky is green - false
         the sky is blue - true
         1 < 0 - false
         0 < 1 - true
-        3 % 2 == 1 - true 
+        3 % 2 == 1 - true
 
 
     // HOW WHILE STATEMENTS WORK
@@ -50,8 +50,9 @@
 
 #include <stdio.h>
 
-int main(void) {
-    
+int main(void)
+{
+
     // 1D WHILE LOOPS
     int size = 3;
     int row = 0; // row is normally referred to as i
@@ -97,13 +98,12 @@ int main(void) {
     return 0;
 }
 
-
 //////////////////////
 //     ANSWER       //
 //////////////////////
 
 // int main(void) {
-    
+
 //     // 1D WHILE LOOPS
 //     int size = 3;
 //     int row = 0; // row is normally referred to as i

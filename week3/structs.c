@@ -10,41 +10,39 @@
 //     // TYPE category;
 // }
 
-
-struct person {
+struct person
+{
     int shoe_size;
     double height;
     char first_name_initial;
-    
+
     // ADVANCED FIELDS
-    // char favourite[MAX_STRING_LEN];
-    // char *colour;
+    char favourite_thing[MAX_STRING_LEN]; // '\0'
+    char first_name[MAX_STRING_LEN];
 };
 
-
-int main() {
+int main()
+{
     struct person samantha;
-    samantha.shoe_size = 100;
-    samantha.height = 220.6;
-    samantha.first_name_initial = 's';
 
+    samantha.shoe_size = 100;
     printf("shoe size: %d\n", samantha.shoe_size);
-    printf("height: %lf\n", samantha.height);
+
+    // 193.7cm
+    samantha.height = 193.7;
+    printf("height: %.1lf\n", samantha.height);
+
+    samantha.first_name_initial = 'S';
     printf("initial: %c\n", samantha.first_name_initial);
 
-    struct person keaton;
+    // ADVANCED STRINGS - NAME
+    // strcpy(destination, input);
+    strcpy(samantha.favourite_thing, "Ice Cream");
+    printf("favourite thing: %s\n", samantha.favourite_thing);
 
-    keaton.shoe_size = 200;
-    keaton.height = 180;
-
-    // ADVANCED STRINGS
-    // printf("Now to do some slightly naughty stuff with strings...\n\n");
-
-    // strcpy(samantha.favourite,"Robbieeee");
-    // samantha.colour = strdup("green");
-
-    // printf("favourite: %s\n", samantha.favourite);
-    // printf("colour: %s\n", samantha.colour);
+    // use strcpy to set the name to samanatha
+    strcpy(samantha.first_name, "samantha");
+    printf("first_name: %s\n", samantha.first_name);
 }
 
 // int main() {
@@ -56,8 +54,6 @@ int main() {
 //     printf("shoe size: %d\n", samantha.shoe_size);
 //     printf("height: %d\n", samantha.shoe_size);
 //     printf("initial: %c\n", samantha.shoe_size);
-
-
 
 //     // ADVANCED STRINGS
 //     printf("Now to do some slightly naughty stuff with strings...\n\n");
