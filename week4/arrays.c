@@ -1,11 +1,19 @@
-// 
+//
 // Written by Robbie Parton z51234578 on x-x-2022
 
 #include <stdio.h>
 
 #define SIZE 3
 
-int main() {
+struct student
+{
+    int age;
+    double height;
+}
+
+int
+main()
+{
 
     // Create a char array
     char char_array[SIZE];
@@ -31,11 +39,12 @@ int main() {
     // Print our int_array
     // What information do we need: SIZE
     int i = 0;
-    while (i < SIZE) {
-        printf("%d\n", int_array[i]); 
+    while (i < SIZE)
+    {
+        printf("%d\n", int_array[i]);
         i++;
     }
-    /* 
+    /*
     i = 0: int_array[0]
     i = 1: int_array[1]
     ...
@@ -46,32 +55,41 @@ int main() {
     // scan n numbers and store it in an array of size n
     // Let n = 3
     i = 0;
-    while (i < SIZE) {
-        scanf(" %d", &int_array[i]); 
+    while (i < SIZE)
+    {
+        scanf(" %d", &int_array[i]);
         i++;
     }
 
     // print out our new array
     i = 0;
-    while (i < SIZE) {
-        printf("%d\n", int_array[i]); 
+    while (i < SIZE)
+    {
+        printf("%d\n", int_array[i]);
         i++;
     }
 
     // copy values from int_array and store it in a new array imposter_array
     int imposter_array[SIZE];
     i = 0;
-    while (i < SIZE) {
+    while (i < SIZE)
+    {
         imposter_array[i] = int_array[i];
         i++;
     }
 
     i = 0;
-    while (i < SIZE) {
+    while (i < SIZE)
+    {
         imposter_array[i] = imposter_array[i] + 1;
-        printf("%d\n", imposter_array[i]); 
+        printf("%d\n", imposter_array[i]);
         i++;
     }
+
+    // accessing a struct array
+    struct student student_array[5];
+    student_array[0].age;
+    student_array[0].height;
 
     return 0;
 }

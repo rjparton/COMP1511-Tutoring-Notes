@@ -1,39 +1,63 @@
 #include <stdio.h>
 
-struct message {
-    char letter1;
-    char letter2;
-    char letter3;
-    char letter4;
-};
-// we define what the heck a struct message is here
-// a struct message contains four characters which we call letter1, letter2 ...... yes?
-// we access by declaring the thing e.g msg
-// msg.letter1 gives us whatever we  stored in letter1 i.e the first letter Y
+char encipherLetter(char character, int num) {
+    if (character >= 'a' && character <= 'z') {
+        character = character - 'a';   // z - a = 122 - 97 = 25
+        character = character + 1;  // character = 26
+        character = character + num;    // 26 + 3 = 29
+        character = character % 26;     // 29 % 26 = 3
+        character = character + 'a' - 1;    // 3 + 97 - 1 = 99
+    } else {
+        character = character - 'A';   // z - a = 122 - 97 = 25
+        character = character + 1;  // character = 26
+        character = character + num;    // 26 + 3 = 29
+        character = character % 26;     // 29 % 26 = 3
+        character = character + 'A' - 1;    // 3 + 97 - 1 = 99
+    }
+    return character;
+}
 
 
-// You may find it helpful to add extra procedures here. Procedures that
-// encipher/decipher the entire `msg` may be useful.
-//
-// Likewise, procedures that encipher/decipher single letters will help reduce
-// code repetition. It is completely up to you whether to create these
-// procedures, but we *highly* recommend you do for practice!
-
-// Determines cyphering for a given msg and prints out the result
-void determine_ciphering(struct message msg) { // whatever we pass in, gets treated as msg in this procedure
-    // TODO: Complete this procedure. This IS needed to compile your program.
-    printf("Would you like to encipher or decipher this message (e/d)? ");
-
-    char encipher_decipher;
-    scanf("%c", &encipher_decipher);
-
-    yes?
-
-    continue yourself.
-
-    rate me 10/5 stars :D
-
+void determine_ciphering(char letter1, char letter2, char letter3, char letter4) {
     
+    printf("Would you like to encipher or decipher this message (e/d)? ");
+    char encipher;
+
+    scanf(" %c", &encipher);
+    if (encipher == 'e') {
+        printf("Enter numbers to encipher by: ");
+    } else {
+        printf("Enter numbers to dencipher by: ");
+    }
+
+    int num1, num2, num3, num4;
+    scanf(" %d %d %d %d", &num1, &num2, &num3, &num4);
+    
+    // encipher ?
+    if (encipher == 'e') {
+        letter1 = encipherLetter(letter1, num1);
+        letter2 = encipherLetter(letter2, num2);
+        letter3 = encipherLetter(letter3, num3);
+        letter4 = encipherLetter(letter4, num4);
+    // or decipher
+    } else {
+        
+    }
+
+    /* 
+    z + 5 
+    122 + 5 = 127
+    127 % 26 = 23. WRONG! 
+
+    'z' - 'a' = 25
+    add 1
+    
+
+     */
+
+    // print
+    printf("%c%c%c%c\n", letter1, letter2, letter3, letter4);
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,34 +66,21 @@ void determine_ciphering(struct message msg) { // whatever we pass in, gets trea
 // This main function scans a message and then calls your determine_ciphering
 // procedure, passing in the message.
 int main(void) {
-    struct message msg;
-
-    // struct message is the equiv of int message
-    // int message // we declare the variable messge of type int. yes?
-    // struct message msg // we declare a variable msg of type struct message. yes? yes. it's a type just like int.
-    
-    // Scan message into `msg` struct
+    // Have a think about how we might implement this with a `struct message`
+    // once we've covered structs in the Thursday lecture!
+    char letter1;
+    char letter2;
+    char letter3;
+    char letter4;
+    // Scan message into the four characters
     printf("Message: ");
     scanf(
         "%c %c %c %c",
-        &msg.letter1, &msg.letter2, &msg.letter3, &msg.letter4
+        &letter1, &letter2, &letter3, &letter4
     );
 
-    printf("%c\n", msg.letter3);
-    // how we access what's in letter1 --> msg.letter1
-    // this will print one char - the Y
-
-    // // DO YOU UNDERSTAND THIS ??
-
     // Call your determine_ciphering function and pass in the message.
-    // We pass in the variable msg into our procedure:
-    determine_ciphering(msg); // yes? yep
+    determine_ciphering(letter1, letter2, letter3, letter4);
+
+    return 0;
 }
-
-// look, pretty fair if I'm honest lol.
-
-// Let me give you the fundamentals
-
-// structs are a container of information
-// they are a type. just like an int.
-
