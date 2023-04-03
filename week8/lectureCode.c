@@ -42,6 +42,7 @@ int main(void) {
 
     struct node *head = NULL;
 
+    // create_node(data, next);
     head = create_node(8, NULL);
     head = create_node(5, head); 
     head = create_node(4, head);
@@ -100,6 +101,7 @@ struct node *insert_at_end(struct node *head) {
     while(current->next != NULL) {
         current = current->next;
     }
+
     // Come out of the while loop current->next = NULL, and you are 
     // standing/sitting at the last node of the list
     struct node *new_node = create_node(13, NULL);
@@ -116,6 +118,7 @@ struct node *insert_anywhere(struct node *head, int position) {
 
     struct node *new_node = create_node(8, NULL);
 
+    // check whether the linked List is empty. Important!!!
     if (current == NULL) {
         head = new_node;
         return head;
@@ -125,7 +128,7 @@ struct node *insert_anywhere(struct node *head, int position) {
     // 1. At the head
     // 2. At the tail
     // 3. Empty list ...
-    // 4. 
+    // 4. in the middle
     while (current->next != NULL && counter != position) {
         current = current->next;
         counter++;
@@ -154,6 +157,7 @@ struct node *delete_node(struct node *head, int data) {
     if (current == NULL) {
         return head;
     }
+
     //2. Delete at the head.... 
     if (current->data == data) {
         head = current->next;
