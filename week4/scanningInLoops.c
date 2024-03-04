@@ -11,16 +11,14 @@ int main()
     char character;
     printf("Enter a character: ");
 
-    // while (scanf("%c", &character) == 1)
-    // {
+    // while (scanf("%c", &character) == 1) {
+    //     printf("The character is '%c' and the ascii value is '%d'!\n", character, character);
+    //     printf("Enter a character: ");
+    // }
+    // while (scanf(" %c", &character) == 1) {
     //     printf("The character is '%c' and the ascii value is '%d'!\n", character, character);
     // }
-    // while (scanf(" %c", &character) == 1)
-    // {
-    //     printf("The character is '%c' and the ascii value is '%d'!\n", character, character);
-    // }
-    // while (scanf("%c", &character) != EOF)
-    // {
+    // while (scanf(" %c", &character) != EOF) {
     //     printf("The character is '%c' and the ascii value is '%d'!\n", character, character);
     // }
     // while (scanf(" %c", &character) != 0) // using != instead of ==
@@ -30,8 +28,7 @@ int main()
     // }
 
     // WON'T WORK!
-    // while (scanf(" %c", &character) == 0)
-    // {
+    // while (scanf(" %c", &character) == 0) {
     //     printf("The character is '%c' and the ascii value is '%d'!\n", character, character);
     // }
 

@@ -13,6 +13,8 @@ int main() {
     struct student stu;
     struct student *stu_pointer = &stu;
 
+    // stu.zID; // works because it's not a pointer
+
     // WORSE WAY
     // (*stu_pointer).zID = 5123456;
     // (*stu_pointer).wam = 74.7;
