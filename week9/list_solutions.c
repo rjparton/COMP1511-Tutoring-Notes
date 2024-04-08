@@ -43,27 +43,31 @@ struct node *add_last(struct node *head, int data) {
 }
 
 struct node *delete_last(struct node *head) {
-    
+
     if (head == NULL) {
         //list is empty, no nodes to delete.
         return head;
     }
-    
+
     struct node *prev = NULL;
     struct node *curr = head;
-    
+
+    // 1 -> 2 -> 3 -> NULL
     while (curr->next != NULL) {
         prev = curr;
         curr = curr->next;
     }
     //at this point curr points to the last node of the list, and prev
     //points to node before it.
-    
+    // curr = 3
+    // prev = 2
+
+    // edge case
     if (prev == NULL) {
         //If prev is NULL, then the last node is also the first node.
         free(curr);
-        return NULL;   
-    } 
+        return NULL;
+    }
 
     // We don't need an else because we returned early
     prev->next = curr->next;
@@ -99,7 +103,7 @@ struct node *list_append(struct node *first_list, struct node *second_list) {
 
     struct node *first_copy = copy(first_list);
     struct node *second_copy = copy(second_list);
-    
+
     struct node *curr = first_copy;
     while (curr->next != NULL) {
         curr = curr->next;

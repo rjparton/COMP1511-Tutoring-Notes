@@ -13,6 +13,89 @@ int main(void) {
 
 /** PRESCRIBED FUNCTIONS **/
 
+// 1 -> 2 -> 3 -> NULL
+// 1 -> 2 -> 1 -> 3 -> NULL
+// 1 -> NULL
+// NULL
+
+// delete the first instance of the smallest number we've seen
+struct node *list_delete_smallest(struct node *head) {
+    /*
+    Find the smallest number in the ll
+        Traverse the ll and record the smallest number we've seen
+    traverse the ll again
+    if node->data == smallest, delete it
+        case: beginning
+            cur = head->next
+            free(head)
+            return cur
+        case: end
+            use a prev
+            while (cur->next != NULL)
+            prev = cur->next
+            free(cur)
+            return head
+    edge cases: head == null or size == 1
+    */
+
+    // edge case!!
+    if (head == NULL || head->next == NULL) {
+        return NULL;
+    }
+
+    struct node *current = head;
+    struct node *prev = NULL;
+    struct node *smallest_prev = NULL;
+
+    int smallest_data = head->data;
+
+    // 2 -> 1 -> 3 -> NULL
+    while (current->next != NULL) {
+        if (current->next->data < smallest_data) {
+            smallest_data = current->next->data;
+            smallest_prev = current;
+        }
+        current = current->next;
+    }
+
+    if (smallest_prev == NULL) {
+        current = head;
+        head = head->next;
+    } else {
+        current = smallest_prev->next;
+        smallest_prev->next = current->next;
+    }
+
+    free(current);
+    return head;
+}
+
+
+struct node *traversal(struct node *head, int data) {
+    struct node *cur = head;
+
+    // traverse entire list
+    while (cur != NULL) {
+        cur = cur->next;
+    }
+    // cur = null
+
+    // make cur be the last node of the ll
+    while (cur->next != NULL) {
+        cur = cur->next;
+    }
+    // cur = 3
+
+    // get second last node of the linked list
+    // 1 -> NULL
+    while (cur->next->next != NULL) {
+        cur = cur->next;
+    }
+    // cur = 2
+
+
+}
+
 struct node *add_last(struct node *head, int data) {
     struct node *new = malloc(sizeof(struct node));
     new->data = data;
@@ -47,7 +130,7 @@ void print_list(struct node *head) {
 struct node *copy(struct node *list) {
     /* Plan
         - Make a pointer to the head of the given linked list
-        - Loop through the original linked list and for each node, 
+        - Loop through the original linked list and for each node,
             create a new node and append it to our new linked list
         - Create the head of a new linked list using malloc
             - Do this for every node we create
@@ -111,10 +194,10 @@ int identical(struct node *first_list, struct node *second_list) {
    struct node *second_current = second_list;
 
     while(first->current != NULL) {
-        
+
         if (first->data != second->data) {
             return 0;
-            
+
         }
 
         first_current = first_current->next;
@@ -168,8 +251,8 @@ struct node *set_intersection(
 
             second_current = second_current->next;
         }
-        
-        
+
+
         second_current = second_list;
         first_current = first_current->next;
     }

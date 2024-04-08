@@ -12,7 +12,7 @@
 
 int main(void) {
     // number array
-    // int numArray[10];
+    int numArray[10];
 
     // int c;
     // c = 3;

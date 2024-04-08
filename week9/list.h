@@ -6,6 +6,7 @@ struct node {
 	struct node *next;		// pointer to the next node
 };
 
+
 /** PRESCRIBED FUNCTIONS **/
 
 // Append to a linked list

@@ -27,56 +27,49 @@ struct celestial_body {
 
 void print_map(struct celestial_body galaxy[SIZE][SIZE]);
 
+// a[0] was 2 when we passed it in
+void addOne(int array[SIZE]) {
+    array[0]++;
+    return;
+}
+
 int main(void) {
     struct celestial_body galaxy[SIZE][SIZE];
 
-    // TODO: Initialize the galaxy
-    for (int row = 0; row < SIZE; row++) {
-        for (int col = 0; col < SIZE; col++) {
-            // we are now able to access the array[col][col] value
-            galaxy[row][col].entity = EMPTY;
+
+    // TODO: Initialize the galaxy: set entity to EMPTY, and points to 0
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+        galaxy[i][j].points = 0;
+        galaxy[i][j].entity = EMPTY;
         }
     }
 
-    // print_map(galaxy);
+    print_map(galaxy);
 
-    // TODO: Place the player in the galaxy
-    printf("Enter the starting position of the player: ");
-    int playerCol;
-    int playerRow;
-    bool validCoords = false;
-    while (!validCoords) {
-        scanf("%d %d", &playerRow, &playerCol);
-
-        // check valid coords
-        if (playerRow >= 0 && playerCol >= 0 && playerRow < SIZE && playerCol < SIZE) {
-            validCoords = true;
-        } else {
-            printf("\nSoz bro. Try again enter the starting position of the player: ");
-        }
-    }
 
     // TODO: Place the planets and nebulae in the galaxy
     printf("How many planets and nebulae are there? ");
     int numPlanets;
     scanf("%d", &numPlanets);
+
+    // TODO: Place the planets and nebulae in the galaxy
+    printf("Enter the position and points of the planet(s) and nebula(e): ");
     for (int i = 0; i < numPlanets; i++) {
-        // scan in the row, col and points for the planet
-        int row, col, points;
-        printf("Enter the row, col and points for planet %d: ", i);
-        scanf("%d %d %d", &row, &col, &points);
+        // scan in the x and y (i and j) coords of this planet
+        int x, y;
 
-        // add the planet and the points directly to the galaxy
-        galaxy[row][col].points = points;
-        galaxy[row][col].entity = PLANET;
+        scanf("%d %d", &x, &y);
+
+        galaxy[x][y].entity = PLANET;
+
     }
-
-    print_map(galaxy);
 
     // TODO: Place the stars in the galaxy
     printf("Enter the position and points of the star(s): \n");
 
     // TODO: Print the map
+    print_map(galaxy);
 }
 
 // Function prints the map of the galaxy
@@ -107,15 +100,15 @@ void print_map(struct celestial_body galaxy[SIZE][SIZE]) {
     }
 }
 
-// // 1D array
+// // // 1D array
 // int array[5];
 // for (int i = 0; i < 5; i++) {
 //     array[i];
 // }
-// // 2D array
-// int array[5][5]; // array[row][col]
-// for (int i = 0; i < 5; i++) {
-//     for (int j = 0; j < 5; j++) {
-//         array[i][j];
-//     }
-// }
+// // // 2D array
+// // int array[5][5]; // array[row][col]
+// // for (int i = 0; i < 5; i++) {
+// //     for (int j = 0; j < 5; j++) {
+// //         array[i][j];
+// //     }
+// // }
